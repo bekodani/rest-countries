@@ -25,7 +25,9 @@ const CountryDetail = ({ match }) => {
 
     return (
         <div> 
+            <Link to={'/rest-countries-api-with-color-theme-switcher/'}>
                 <button onClick={handleOnClick} className="back-btn"><BsArrowLeft /> Back</button>
+            </Link>
             {country.map((country, index) => (
                 <div className="detail-card" key={index}>
                     <CountryDetails 
