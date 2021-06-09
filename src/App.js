@@ -13,8 +13,8 @@ const App = () => {
       <div>
       <Header />
         <Switch>
-          <Route path='/' exact component={Countries} />
-          <Route path='/:id' exact component={CountryDetail}/>
+          <Route path='/rest-countries-api-with-color-theme-switcher/' exact component={Countries} />
+          <Route path='/rest-countries-api-with-color-theme-switcher/:id' exact component={CountryDetail}/>
         </Switch>
     </div>
     </Router>

@@ -1,12 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import CountryDetails from './CountryDetails';
 import { BsArrowLeft } from 'react-icons/bs';
+import {useHistory} from 'react-router-dom';
 
 
 const CountryDetail = ({ match }) => {
     const [country, setCountry] = useState([]);
+
+    const history = useHistory();
+    const handleOnClick = useCallback(() => history.push('/rest-countries-api-with-color-theme-switcher/'), [history]);
 
 
     useEffect(() => {
@@ -21,9 +25,7 @@ const CountryDetail = ({ match }) => {
 
     return (
         <div> 
-            <Link to={'/'}>
-                <button className="back-btn"><BsArrowLeft /> Back</button>
-            </Link>
+                <button onClick={handleOnClick} className="back-btn"><BsArrowLeft /> Back</button>
             {country.map((country, index) => (
                 <div className="detail-card" key={index}>
                     <CountryDetails 
