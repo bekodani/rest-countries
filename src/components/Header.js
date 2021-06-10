@@ -27,9 +27,9 @@ const Header = () => {
         <div className="header">
             <ul className="header-ul" >
                 <li className="header-li">
-                    <Link to="/rest-countries/">
+
                         <h3>Where in the world?</h3>
-                    </Link>
+
                 </li>
                 <li className="header-li"><button onClick={() => {themeToggler(); handleButton()}} className="nav-btn"><HiOutlineMoon/> {toggleButton}</button></li>
             </ul>
