@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Country = (props) => {
     return (
 
-        <div className="country-card">
+        <div>
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`/${props.name}`}>
             <div className="country-card-wrapper">
                 <div className="country-card-img-wrapper">

@@ -20,6 +20,7 @@ code {
 }
 
 
+
 .countries-bg {
   padding-top: 1rem;
   min-height: 100%;
@@ -186,6 +187,11 @@ input {
 .option-wrapper {
   margin: 15px;
 }
+
+.option-wrapper select {
+  padding: 15px;
+}
+
 .option-wrapper label, .option-wrapper select {
   display: block;
 }
@@ -201,4 +207,61 @@ select {
   padding: 0.5rem;
 }
 
+
+
+@media only screen and (min-width: 768px) {
+  .countries-wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .country-card {
+
+  }
+
+/*   .countries-bg {
+    vertical-align: top;
+    text-align: center;
+    flex: 1 0 21%;
+    max-height: 250px;
+  } */
+
+  .country-card-img-wrapper {
+
+
+
+
+  }
+
+  .country-card-img-wrapper img {
+
+
+  }
+  
+ 
+  .input-wrapper, .option-wrapper {
+    display: inline-block;
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .country-card-text-wrapper  {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h6, p {
+    font-size: 4px;
+  }
+
+}
 

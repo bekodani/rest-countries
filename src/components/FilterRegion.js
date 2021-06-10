@@ -5,7 +5,7 @@ const FilterRegion = (props) => {
 
     return (
         <div className="option-wrapper">
-            <label className="region-filter">Filter by Region</label>
+{/*             <label className="region-filter">Filter by Region</label> */}
             <select value={props.value} onChange={props.onChange}>
                 <option value="all">All</option>
                 <option value="africa">Africa</option>

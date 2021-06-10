@@ -70,11 +70,11 @@ const Countries = () => {
     }
     return (
         <div>
-            <FilterCountry onChange={e=> setSearchCountry(e.target.value)}/>
-            <FilterRegion value={region} onChange={e=> setRegion(e.target.value)} />
-            <div>
-                
+            <div className="search-wrapper">
+                <FilterCountry onChange={e=> setSearchCountry(e.target.value)}/>
+                <FilterRegion value={region} onChange={e=> setRegion(e.target.value)} />
             </div>
+            <div className="countries-wrapper">
             {filteredCountries.filter((country) => {
                 if (searchCountry === "") {
                     return country;
@@ -83,10 +83,11 @@ const Countries = () => {
                 } else
                 return country.pupulation > 1000;
             }).map((country, index) => (
-                <div className="countries-bg" key={index}>
+                <div  className="country-card" key={index}>
                         <Country name={country.name} flag={country.flag} population={country.population} region={country.region} capital={country.capital}/>
                 </div>
             ))}
+            </div>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const App = () => {
       <div>
       <Header />
         <Switch>
-          <Route path='/rest-countries/' exact component={Countries} />
+          <Route path='/' exact component={Countries} />
           <Route path='/:id' exact component={CountryDetail}/>
         </Switch>
     </div>

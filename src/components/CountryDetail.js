@@ -26,7 +26,7 @@ const CountryDetail = ({ match }) => {
 
     return (
         <div> 
-                <Link to="/rest-countries/">
+                <Link to="/">
                     <button className="back-btn"><BsArrowLeft /> Back</button>
                 </Link>
 
