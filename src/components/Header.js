@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { HiOutlineMoon } from 'react-icons/hi';
 import styled, { ThemeProvider } from "styled-components";
 import {lightTheme, darkTheme, GlobalStyles} from './Themes';
+import {Link} from 'react-router-dom';
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.fontColor};
@@ -25,7 +26,11 @@ const Header = () => {
             <StyledApp>
         <div className="header">
             <ul className="header-ul" >
-                <li className="header-li"><h3>Where in the world?</h3></li>
+                <li className="header-li">
+                    <Link to="/rest-countries/">
+                        <h3>Where in the world?</h3>
+                    </Link>
+                </li>
                 <li className="header-li"><button onClick={() => {themeToggler(); handleButton()}} className="nav-btn"><HiOutlineMoon/> {toggleButton}</button></li>
             </ul>
         </div>
